@@ -1,5 +1,5 @@
 "use client";
-
+import "./globals.css";
 import { useEffect, useMemo, useState } from "react";
 import { YearMonthDayPicker } from "@/components/pickers/YearMonthDayPicker";
 import { PriceChart } from "@/components/charts/PriceChart";

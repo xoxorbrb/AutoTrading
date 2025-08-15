@@ -6,29 +6,7 @@ import React from "react";
 import { CalendarDays } from "lucide-react";
 import type { YearData } from "@/services/types";
 import { percentChange } from "@/services/utils";
-import { PctBadge } from "@/components/common/PctBadge";
-
-// 단일 Pill 버튼 컴포넌트 (활성/비활성 스타일)
-const Pill: React.FC<{
-  active?: boolean;
-  onClick?: () => void;
-  label: string;
-  pct: number | null;
-}> = ({ active, onClick, label, pct }) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition ${
-        active
-          ? "bg-black/90 text-white border-black"
-          : "bg-white hover:bg-black/5 border-black/10"
-      }`}
-    >
-      <span className="font-medium">{label}</span>
-      <PctBadge value={pct} />
-    </button>
-  );
-};
+import { Pill } from "@/components/ui/Button";
 
 export const YearMonthDayPicker: React.FC<{
   years: YearData[];
